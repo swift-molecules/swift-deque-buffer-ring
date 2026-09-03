@@ -7,17 +7,17 @@ import Deque
 import Deque_Buffer_Ring
 import Deque_Storage
 import Index
-import Memory_Allocator_Primitive
+import Memory_Allocator
 import Memory_Heap
 import Ordinal_Standard_Library_Integration
 import Ownership_Shared_Primitive
 import Queue_Primitive
-import Storage_Contiguous
+import Storage_Memory
 import Tagged_Standard_Library_Integration
 import Testing
 
 private typealias HeapStorage<E: ~Copyable> =
-    Storage<Memory.Allocator<Memory.Heap>>.Contiguous<E>
+    Storage::Storage<Memory.Allocator<Memory.Heap>>.Contiguous<E>
 
 private typealias GrowableRing<E: ~Copyable> = Buffer<HeapStorage<E>>.Ring
 private typealias BoundedRing<E: ~Copyable> = Buffer<HeapStorage<E>>.Ring.Bounded

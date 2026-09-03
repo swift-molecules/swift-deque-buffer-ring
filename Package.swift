@@ -19,7 +19,7 @@ let package = Package(
     ],
     dependencies: [
         .package(
-            url: "https://github.com/swift-molecules/swift-deque.git",
+            url: "https://github.com/swift-atoms/swift-deque.git",
             branch: "main"
         ),
         .package(
@@ -39,7 +39,11 @@ let package = Package(
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-atoms/swift-storage.git",
+            url: "https://github.com/swift-atoms/swift-store.git",
+            branch: "main"
+        ),
+        .package(
+            url: "https://github.com/swift-molecules/swift-storage-memory.git",
             branch: "main"
         ),
         .package(
@@ -72,21 +76,22 @@ let package = Package(
             name: "Deque Buffer Ring",
             dependencies: [
                 .product(name: "Deque", package: "swift-deque"),
-                .product(name: "Queue Primitive", package: "swift-queue"),
-                .product(name: "Buffer Primitive", package: "swift-buffer"),
-                .product(name: "Buffer Ring Primitive", package: "swift-buffer-ring"),
+                .product(name: "Queue", package: "swift-queue"),
+                .product(name: "Buffer", package: "swift-buffer"),
+                .product(name: "Buffer Ring", package: "swift-buffer-ring"),
                 .product(
-                    name: "Buffer Ring Bounded Primitive",
+                    name: "Buffer Ring Bounded",
                     package: "swift-buffer-ring"
                 ),
-                .product(name: "Storage Contiguous", package: "swift-storage"),
+                .product(name: "Store Protocol", package: "swift-store"),
+                .product(name: "Storage Memory", package: "swift-storage-memory"),
                 .product(name: "Memory Heap", package: "swift-memory-heap"),
                 .product(
-                    name: "Memory Allocator Primitive",
+                    name: "Memory Allocator",
                     package: "swift-memory-allocation"
                 ),
                 .product(
-                    name: "Ownership Shared Primitive",
+                    name: "Ownership Shared",
                     package: "swift-ownership-shared"
                 ),
                 .product(name: "Index", package: "swift-index"),
@@ -98,23 +103,23 @@ let package = Package(
                 "Deque Buffer Ring",
                 .product(name: "Deque", package: "swift-deque"),
                 .product(name: "Deque Storage", package: "swift-deque-storage"),
-                .product(name: "Queue Primitive", package: "swift-queue"),
-                .product(name: "Buffer Primitive", package: "swift-buffer"),
+                .product(name: "Queue", package: "swift-queue"),
+                .product(name: "Buffer", package: "swift-buffer"),
                 .product(name: "Buffer Test Support", package: "swift-buffer"),
                 .product(name: "Buffer Ring", package: "swift-buffer-ring"),
-                .product(name: "Buffer Ring Primitive", package: "swift-buffer-ring"),
                 .product(
-                    name: "Buffer Ring Bounded Primitive",
+                    name: "Buffer Ring Bounded",
                     package: "swift-buffer-ring"
                 ),
-                .product(name: "Storage Contiguous", package: "swift-storage"),
+                .product(name: "Store Protocol", package: "swift-store"),
+                .product(name: "Storage Memory", package: "swift-storage-memory"),
                 .product(name: "Memory Heap", package: "swift-memory-heap"),
                 .product(
-                    name: "Memory Allocator Primitive",
+                    name: "Memory Allocator",
                     package: "swift-memory-allocation"
                 ),
                 .product(
-                    name: "Ownership Shared Primitive",
+                    name: "Ownership Shared",
                     package: "swift-ownership-shared"
                 ),
                 .product(name: "Index", package: "swift-index"),
