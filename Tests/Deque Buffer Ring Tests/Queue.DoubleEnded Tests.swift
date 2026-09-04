@@ -8,7 +8,7 @@ import Deque_Buffer_Ring
 import Deque_Storage
 import Index
 import Memory_Allocator
-import Memory_Heap
+import Memory
 import Ordinal_Standard_Library_Integration
 import Ownership_Shared_Primitive
 import Queue_Primitive

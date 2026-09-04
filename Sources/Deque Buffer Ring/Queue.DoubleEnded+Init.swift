@@ -5,7 +5,7 @@ public import Deque
 public import Index
 public import Memory_Allocator
 public import Memory_Allocator_Protocol
-public import Memory_Heap
+public import Memory
 public import Ownership_Shared_Primitive
 public import Storage_Memory
 

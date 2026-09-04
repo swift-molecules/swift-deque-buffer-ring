@@ -2,7 +2,7 @@ public import Buffer_Primitive
 public import Deque
 public import Buffer_Ring_Primitive
 public import Memory_Allocator
-public import Memory_Heap
+public import Memory
 public import Queue_Primitive
 public import Storage_Memory
 public import Store_Protocol
